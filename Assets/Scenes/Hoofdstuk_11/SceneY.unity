@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 528877778}
   - component: {fileID: 528877777}
   m_Layer: 5
-  m_Name: Text
+  m_Name: gemeentehuisfoto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: H
+  m_Text: gemeetehuis
 --- !u!222 &528877778
 CanvasRenderer:
   m_ObjectHideFlags: 0
