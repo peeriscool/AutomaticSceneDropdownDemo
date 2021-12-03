@@ -72,6 +72,14 @@ public class AvatarController : MonoBehaviour
     public void Awake()
     {
         Debug.Log("Mesh created");
+        if (KinectMotionData.RigRefrence)
+        {
+            foreach (Transform item in KinectMotionData.RigRefrence.transform)
+            {
+                Debug.Log(item.transform.position);
+               // item.gameObject.AddComponent(DitzelGames.FastIK.FastIKLook);
+            }
+        }
         // check for double start
         if (bones != null)
             return;
@@ -93,35 +101,48 @@ public class AvatarController : MonoBehaviour
     // Update the avatar each frame.
     public void UpdateAvatar(ulong UserID, Kinect.Body body, GameObject bodyobject)
     {
-        if (!transform.gameObject.activeInHierarchy)
-            return;
-
-        // move the avatar to its Kinect position
-        MoveAvatar(UserID);
-
-        for (var boneIndex = 0; boneIndex < bones.Length; boneIndex++)
+        for (Kinect.JointType jt = Kinect.JointType.SpineBase; jt <= Kinect.JointType.ThumbRight; jt++)
         {
-            if (!bones[boneIndex])
-                continue;
 
-            if (boneIndex2JointMap.ContainsKey(boneIndex))
-            {
-                //enum of bone is equal to !MirriredMovement ? Dictonionary of _bonemap : mirrored _bonemap
-                Kinect.JointType joint = !mirroredMovement ? boneIndex2JointMap[boneIndex] : boneIndex2MirrorJointMap[boneIndex]; 
-                TransformBone(UserID, KinectMotionData, boneIndex, !mirroredMovement);
-            }
-            else if (specIndex2JointMap.ContainsKey(boneIndex))
-            {
-                // special bones (clavicles)
-                List<Kinect.JointType> alJoints = !mirroredMovement ? specIndex2JointMap[boneIndex] : specIndex2MirrorJointMap[boneIndex];
+            Transform jointObj = bodyobject.transform.Find(jt.ToString());
+            jointObj.localPosition = new Vector3(jointObj.position.y * 10, jointObj.position.y * 10, jointObj.position.z * 10);
 
-                if (alJoints.Count >= 2)
-                {
-                    //Vector3 baseDir = alJoints[0].ToString().EndsWith("Left") ? Vector3.left : Vector3.right;
-                    //TransformSpecialBone(UserID, alJoints[0], alJoints[1], boneIndex, baseDir, !mirroredMovement);
-                }
+            foreach (Transform item in KinectMotionData.RigRefrence.transform)
+            {
+                TransformBone(UserID,body.JointOrientations[jt],(int)jt,false);
+                item.transform.position = jointObj.localPosition; //AddComponent(DitzelGames.FastIK.FastIKLook);
             }
         }
+
+        //if (!transform.gameObject.activeInHierarchy)
+        //    return;
+
+        //// move the avatar to its Kinect position
+        //MoveAvatar(UserID);
+
+        //for (var boneIndex = 0; boneIndex < bones.Length; boneIndex++)
+        //{
+        //    if (!bones[boneIndex])
+        //        continue;
+
+        //    if (boneIndex2JointMap.ContainsKey(boneIndex))
+        //    {
+        //        //enum of bone is equal to !MirriredMovement ? Dictonionary of _bonemap : mirrored _bonemap
+        //        Kinect.JointType joint = !mirroredMovement ? boneIndex2JointMap[boneIndex] : boneIndex2MirrorJointMap[boneIndex]; 
+        //        TransformBone(UserID, KinectMotionData, boneIndex, !mirroredMovement);
+        //    }
+        //    else if (specIndex2JointMap.ContainsKey(boneIndex))
+        //    {
+        //        // special bones (clavicles)
+        //        List<Kinect.JointType> alJoints = !mirroredMovement ? specIndex2JointMap[boneIndex] : specIndex2MirrorJointMap[boneIndex];
+
+        //        if (alJoints.Count >= 2)
+        //        {
+        //            //Vector3 baseDir = alJoints[0].ToString().EndsWith("Left") ? Vector3.left : Vector3.right;
+        //            //TransformSpecialBone(UserID, alJoints[0], alJoints[1], boneIndex, baseDir, !mirroredMovement);
+        //        }
+        //    }
+        //}
     }
 
     // Set bones to their initial positions and rotations
@@ -181,7 +202,7 @@ public class AvatarController : MonoBehaviour
     }
 
     // Apply the rotations tracked by kinect to the joints.
-    protected void TransformBone(ulong userId, BodySourceView joint, int boneIndex, bool flip)
+    protected void TransformBone(ulong userId, Kinect.JointOrientation joint, int boneIndex, bool flip)
     {
         Transform boneTransform = bones[boneIndex];
         if (boneTransform == null || joint == null)
@@ -192,7 +213,7 @@ public class AvatarController : MonoBehaviour
             return;
 
         // Get Kinect joint orientation
-        Quaternion jointRotation = Quaternion.identity; //joint.GetJointOrientation(userId, iJoint, flip);
+        Quaternion jointRotation = new Quaternion(joint.Orientation.X, joint.Orientation.Y, joint.Orientation.Z, joint.Orientation.W) ; //GetJointOrientation(userId, iJoint, flip);
         if (jointRotation == Quaternion.identity)
             return;
 
