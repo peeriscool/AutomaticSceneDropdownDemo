@@ -91,7 +91,7 @@ public class AvatarController : MonoBehaviour
     }
 
     // Update the avatar each frame.
-    public void UpdateAvatar(uint UserID)
+    public void UpdateAvatar(ulong UserID, Kinect.Body body, GameObject bodyobject)
     {
         if (!transform.gameObject.activeInHierarchy)
             return;
@@ -181,7 +181,7 @@ public class AvatarController : MonoBehaviour
     }
 
     // Apply the rotations tracked by kinect to the joints.
-    protected void TransformBone(uint userId, BodySourceView joint, int boneIndex, bool flip)
+    protected void TransformBone(ulong userId, BodySourceView joint, int boneIndex, bool flip)
     {
         Transform boneTransform = bones[boneIndex];
         if (boneTransform == null || joint == null)
@@ -245,7 +245,7 @@ public class AvatarController : MonoBehaviour
 
     // Moves the avatar in 3D space - pulls the tracked position of the spine and applies it to root.
     // Only pulls positional, not rotational.
-    protected void MoveAvatar(uint UserID)
+    protected void MoveAvatar(ulong UserID)
     {
         //if (bodyRoot == null || trackedIds == null)
         //    return;

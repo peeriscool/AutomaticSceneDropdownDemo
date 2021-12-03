@@ -100,9 +100,11 @@ public class BodySourceView : MonoBehaviour
                 if(!_Bodies.ContainsKey(body.TrackingId))
                 {
                     _Bodies[body.TrackingId] = CreateBodyObject(body.TrackingId);
+                    Prefab.SetActive(true);
                 }
                 
                 RefreshBodyObject(body, _Bodies[body.TrackingId]);
+                Prefab.GetComponent<AvatarController>().UpdateAvatar(body.TrackingId, body, _Bodies[body.TrackingId]);
             }
         }
     }
@@ -110,8 +112,8 @@ public class BodySourceView : MonoBehaviour
     private GameObject CreateBodyObject(ulong id)
     {
         GameObject body = new GameObject("Body:" + id);
-        GameObject controller = GameObject.Instantiate(Prefab);
-        controller.transform.parent = body.transform;
+      //  GameObject controller = GameObject.Instantiate(Prefab);
+      //  controller.transform.parent = body.transform;
         //object1 is now the child of object2
 
         for (Kinect.JointType jt = Kinect.JointType.SpineBase; jt <= Kinect.JointType.ThumbRight; jt++)
