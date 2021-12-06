@@ -994,6 +994,7 @@ GameObject:
   - component: {fileID: 3952012516398958213}
   - component: {fileID: 3952012516389644501}
   - component: {fileID: 3854629850463951373}
+  - component: {fileID: 7404100058791137251}
   m_Layer: 0
   m_Name: U_Character_REF
   m_TagString: Untagged
@@ -1055,6 +1056,24 @@ MonoBehaviour:
   smoothFactor: 5
   offsetRelativeToSensor: 0
   KinectMotionData: {fileID: 0}
+--- !u!114 &7404100058791137251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3952012516398996197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9cd2c593f693345ad26b97d5a0d43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FootTarget: []
+  LookTarget: {fileID: 0}
+  HandTarget: {fileID: 0}
+  HandPole: {fileID: 0}
+  Step: {fileID: 0}
+  Attraction: {fileID: 0}
 --- !u!1 &3952012516398996209
 GameObject:
   m_ObjectHideFlags: 0

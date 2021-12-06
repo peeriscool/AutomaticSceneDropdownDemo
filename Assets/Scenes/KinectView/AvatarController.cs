@@ -85,7 +85,7 @@ public class AvatarController : MonoBehaviour
             return;
 
         // inits the bones array
-        bones = new Transform[22];
+        bones = new Transform[25];
 
         // Initial rotations and directions of the bones.
         initialRotations = new Quaternion[bones.Length];
@@ -101,18 +101,22 @@ public class AvatarController : MonoBehaviour
     // Update the avatar each frame.
     public void UpdateAvatar(ulong UserID, Kinect.Body body, GameObject bodyobject)
     {
-        for (Kinect.JointType jt = Kinect.JointType.SpineBase; jt <= Kinect.JointType.ThumbRight; jt++)
+        Debug.Log(body.JointOrientations.Values.Count + " BoneData");
+        Debug.Log(bones.Length + " indexedvalues");
+             TransformBone(UserID, body.JointOrientations[0], (int)0, false);
+        //maps al bones but incorrect
+        //for (Kinect.JointType jt = Kinect.JointType.SpineBase; jt <= Kinect.JointType.HandTipLeft; jt++) //ThumbRight
+        //{
+        //    Debug.Log(bodyobject.transform.Find(jt.ToString()));
+        //    Transform jointObj = bodyobject.transform.Find(jt.ToString());
+        //    jointObj.localPosition = new Vector3(jointObj.position.y * 10, jointObj.position.y * 10, jointObj.position.z * 10);
+        //    //  Debug.Log(body.Joints[_BoneMap[jt]].JointType.ToString() + "/" + bones[(int)jt]);
+        //    TransformBone(UserID, body.JointOrientations[jt], (int)jt, false);
+        for (int i = 0; i < bones.Length; i++)
         {
-
-            Transform jointObj = bodyobject.transform.Find(jt.ToString());
-            jointObj.localPosition = new Vector3(jointObj.position.y * 10, jointObj.position.y * 10, jointObj.position.z * 10);
-
-            foreach (Transform item in KinectMotionData.RigRefrence.transform)
-            {
-                TransformBone(UserID,body.JointOrientations[jt],(int)jt,false);
-                item.transform.position = jointObj.localPosition; //AddComponent(DitzelGames.FastIK.FastIKLook);
-            }
+            TransformBone(UserID, body.JointOrientations[(Kinect.JointType)i], (int)i, false);
         }
+        //}
 
         //if (!transform.gameObject.activeInHierarchy)
         //    return;
@@ -453,6 +457,7 @@ public class AvatarController : MonoBehaviour
         {19, HumanBodyBones.RightLowerLeg},
         {20, HumanBodyBones.RightFoot},
         {21, HumanBodyBones.RightToes},
+        //{22, HumanBodyBones.}, missing 3 bones
     };
 
     protected readonly Dictionary<int, Kinect.JointType > boneIndex2JointMap = new Dictionary<int, Kinect.JointType>
@@ -528,36 +533,85 @@ public class AvatarController : MonoBehaviour
 
     //-----------------------------------------------------------------------------------------------------------------------------------------------\\
     // _bonemap from bodysourceview
-    public Dictionary<Kinect.JointType, Kinect.JointType> _BoneMap = new Dictionary<Kinect.JointType, Kinect.JointType>()
+    public Dictionary<HumanBodyBones, Kinect.JointType> _BoneMap = new Dictionary<HumanBodyBones, Kinect.JointType>()
     {
-        { Kinect.JointType.FootLeft, Kinect.JointType.AnkleLeft },
-        { Kinect.JointType.AnkleLeft, Kinect.JointType.KneeLeft },
-        { Kinect.JointType.KneeLeft, Kinect.JointType.HipLeft },
-        { Kinect.JointType.HipLeft, Kinect.JointType.SpineBase },
+        {HumanBodyBones.Hips,Kinect.JointType.SpineBase},
+        {HumanBodyBones.Spine,Kinect.JointType.SpineMid},
+        {HumanBodyBones.Neck,Kinect.JointType.Neck},
+        {HumanBodyBones.Head,Kinect.JointType.Head},
 
-        { Kinect.JointType.FootRight, Kinect.JointType.AnkleRight },
-        { Kinect.JointType.AnkleRight, Kinect.JointType.KneeRight },
-        { Kinect.JointType.KneeRight, Kinect.JointType.HipRight },
-        { Kinect.JointType.HipRight, Kinect.JointType.SpineBase },
+        {HumanBodyBones.LeftShoulder,Kinect.JointType.ShoulderLeft},
+        {HumanBodyBones.LeftUpperArm,Kinect.JointType.ElbowLeft},
+        {HumanBodyBones.LeftLowerArm,Kinect.JointType.WristLeft},
+        {HumanBodyBones.LeftHand,Kinect.JointType.HandLeft},
+        {HumanBodyBones.LeftIndexProximal,Kinect.JointType.HandTipLeft},
 
-        { Kinect.JointType.HandTipLeft, Kinect.JointType.HandLeft },
-        { Kinect.JointType.ThumbLeft, Kinect.JointType.HandLeft },
-        { Kinect.JointType.HandLeft, Kinect.JointType.WristLeft },
-        { Kinect.JointType.WristLeft, Kinect.JointType.ElbowLeft },
-        { Kinect.JointType.ElbowLeft, Kinect.JointType.ShoulderLeft },
-        { Kinect.JointType.ShoulderLeft, Kinect.JointType.SpineShoulder },
+        {HumanBodyBones.RightShoulder,Kinect.JointType.ShoulderRight},
+        {HumanBodyBones.RightUpperArm,Kinect.JointType.ElbowLeft},
+        {HumanBodyBones.RightLowerArm,Kinect.JointType.WristRight},
+        {HumanBodyBones.RightHand,Kinect.JointType.HandRight},
+        {HumanBodyBones.RightIndexProximal,Kinect.JointType.HandTipRight},
 
-        { Kinect.JointType.HandTipRight, Kinect.JointType.HandRight },
-        { Kinect.JointType.ThumbRight, Kinect.JointType.HandRight },
-        { Kinect.JointType.HandRight, Kinect.JointType.WristRight },
-        { Kinect.JointType.WristRight, Kinect.JointType.ElbowRight },
-        { Kinect.JointType.ElbowRight, Kinect.JointType.ShoulderRight },
-        { Kinect.JointType.ShoulderRight, Kinect.JointType.SpineShoulder },
+        {HumanBodyBones.LeftUpperLeg,Kinect.JointType.HipLeft},
+        {HumanBodyBones.LeftLowerLeg,Kinect.JointType.KneeLeft},
+        {HumanBodyBones.LeftFoot,Kinect.JointType.FootLeft},
+        {HumanBodyBones.LeftToes,Kinect.JointType.FootLeft},
 
-        { Kinect.JointType.SpineBase, Kinect.JointType.SpineMid },
-        { Kinect.JointType.SpineMid, Kinect.JointType.SpineShoulder },
-        { Kinect.JointType.SpineShoulder, Kinect.JointType.Neck },
-        { Kinect.JointType.Neck, Kinect.JointType.Head },
+        {HumanBodyBones.RightUpperLeg,Kinect.JointType.HipRight},
+        {HumanBodyBones.RightLowerLeg,Kinect.JointType.KneeRight},
+        {HumanBodyBones.RightFoot,Kinect.JointType.FootRight},
+        {HumanBodyBones.RightToes,Kinect.JointType.FootRight},
+
+        //{ HumanBodyBones.HandTipLeft, Kinect.JointType.HandLeft },
+        //{ HumanBodyBones.ThumbLeft, Kinect.JointType.HandLeft },
+        //{ HumanBodyBones.HandLeft, Kinect.JointType.WristLeft },
+        //{ HumanBodyBones.WristLeft, Kinect.JointType.ElbowLeft },
+        //{ HumanBodyBones.ElbowLeft, Kinect.JointType.ShoulderLeft },
+        //{ HumanBodyBones.ShoulderLeft, Kinect.JointType.SpineShoulder },
+
+        //{ HumanBodyBones.HandTipRight, Kinect.JointType.HandRight },
+        //{ HumanBodyBones.ThumbRight, Kinect.JointType.HandRight },
+        //{ HumanBodyBones.HandRight, Kinect.JointType.WristRight },
+        //{ HumanBodyBones.WristRight, Kinect.JointType.ElbowRight },
+        //{ HumanBodyBones.ElbowRight, Kinect.JointType.ShoulderRight },
+        //{ HumanBodyBones.ShoulderRight, Kinect.JointType.SpineShoulder },
+
+        //{ HumanBodyBones.Hips, Kinect.JointType.SpineMid },
+        //{ HumanBodyBones.SpineMid, Kinect.JointType.SpineShoulder },
+        //{ HumanBodyBones.SpineShoulder, Kinect.JointType.Neck },
+        //{ HumanBodyBones.Neck, Kinect.JointType.Head },
+
+        //  { HumanBodyBones.FootLeft, Kinect.JointType.AnkleLeft },
+        //{ HumanBodyBones.AnkleLeft, Kinect.JointType.KneeLeft },
+        //{ HumanBodyBones.KneeLeft, Kinect.JointType.HipLeft },
+        //{ HumanBodyBones.HipLeft, Kinect.JointType.SpineBase },
+
+        //{ HumanBodyBones.FootRight, Kinect.JointType.AnkleRight },
+        //{ HumanBodyBones.AnkleRight, Kinect.JointType.KneeRight },
+        //{ HumanBodyBones.KneeRight, Kinect.JointType.HipRight },
+        //{ HumanBodyBones.HipRight, Kinect.JointType.SpineBase },
+
+        //{ HumanBodyBones.HandTipLeft, Kinect.JointType.HandLeft },
+        //{ HumanBodyBones.ThumbLeft, Kinect.JointType.HandLeft },
+        //{ HumanBodyBones.HandLeft, Kinect.JointType.WristLeft },
+        //{ HumanBodyBones.WristLeft, Kinect.JointType.ElbowLeft },
+        //{ HumanBodyBones.ElbowLeft, Kinect.JointType.ShoulderLeft },
+        //{ HumanBodyBones.ShoulderLeft, Kinect.JointType.SpineShoulder },
+
+        
+
+        //{ Kinect.JointType.HandTipRight, Kinect.JointType.HandRight },
+        //{ Kinect.JointType.ThumbRight, Kinect.JointType.HandRight },
+        //{ Kinect.JointType.HandRight, Kinect.JointType.WristRight },
+        //{ Kinect.JointType.WristRight, Kinect.JointType.ElbowRight },
+        //{ Kinect.JointType.ElbowRight, Kinect.JointType.ShoulderRight },
+        //{ Kinect.JointType.ShoulderRight, Kinect.JointType.SpineShoulder },
+
+        //{ Kinect.JointType.SpineBase, Kinect.JointType.SpineMid },
+        //{ Kinect.JointType.SpineMid, Kinect.JointType.SpineShoulder },
+        //{ Kinect.JointType.SpineShoulder, Kinect.JointType.Neck },
+        //{ Kinect.JointType.Neck, Kinect.JointType.Head },
+
     };
 
 }
