@@ -75,6 +75,7 @@ public class BasketballSpinnerSample : MonoBehaviour
             FaceAlignment aligment = Microsoft.Kinect.Face.FaceAlignment.Create();
             _faceAlignment = aligment;//_faceModel.CalculateVerticesForAlignment(aligment) ;
             sensor.Open();
+            GetFaceTracking();
         }
     }
 
@@ -121,6 +122,8 @@ public class BasketballSpinnerSample : MonoBehaviour
         if (_faceModel == null) return;
 
         var vertices = _faceModel.CalculateVerticesForAlignment(_faceAlignment);
+
+
     }
 
     void Update()
@@ -177,7 +180,52 @@ public class BasketballSpinnerSample : MonoBehaviour
             }
         }
     }
+    void GetFaceTracking()
+        {
+        //-------Rude intrution---------------------//
+        if (_faceModel == null) return;
+        else
+        {
+            var vertices = _faceModel.CalculateVerticesForAlignment(_faceAlignment);
 
+            if (vertices.Count > 0)
+            {
+                if (_points.Count == 0)
+                {
+                    for (int index = 0; index < vertices.Count; index++)
+                    {
+                        GameObject ellipse = new GameObject();
+                        {
+                            //Width = 2.0,
+                            //Height = 2.0,
+                            //Fill = new SolidColorBrush(Colors.Blue)
+                        };
+
+                        _points.Add(ellipse);
+                    }
+
+                    foreach (GameObject item in _points)
+                    {
+                        //  canvas.Children.Add(ellipse);
+                        GameObject ellipse = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                    }
+                }
+
+                for (int index = 0; index < vertices.Count; index++)
+                {
+                    CameraSpacePoint vertice = vertices[index];
+                    DepthSpacePoint point = sensor.CoordinateMapper.MapCameraPointToDepthSpace(vertice);
+
+                    if (float.IsInfinity(point.X) || float.IsInfinity(point.Y)) return;
+
+                    GameObject ellipse = _points[index];
+
+                    // Canvas.SetLeft(ellipse, point.X);
+                    // Canvas.SetTop(ellipse, point.Y);
+                }
+            }
+        }
+    }
     void OnApplicationQuit()
     {
         if (bodyReader != null)
