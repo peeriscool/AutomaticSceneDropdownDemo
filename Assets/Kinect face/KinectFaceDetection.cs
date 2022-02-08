@@ -40,9 +40,9 @@ public class KinectFaceDetection : MonoBehaviour
         if (_sensor != null)
         {
             // Listen for body data.
-            //_bodySource = _sensor.BodyFrameSource;
-            //_bodyReader = _bodySource.OpenReader();
-            //_bodyReader.FrameArrived += BodyReader_FrameArrived;
+            _bodySource = _sensor.BodyFrameSource;
+            _bodyReader = _bodySource.OpenReader();
+            _bodyReader.FrameArrived += BodyReader_FrameArrived;
 
             // Listen for HD face data.
             _faceSource = HighDefinitionFaceFrameSource.Create(_sensor);
@@ -112,7 +112,7 @@ public class KinectFaceDetection : MonoBehaviour
             {
                 for (int index = 0; index < vertices.Count; index++)
                 {
-                    GameObject ellipse = new GameObject();
+                    GameObject ellipse = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                     {
                         //Width = 2.0,
                         //Height = 2.0,
@@ -126,6 +126,7 @@ public class KinectFaceDetection : MonoBehaviour
                 {
                     //  canvas.Children.Add(ellipse);
                     GameObject ellipse = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                    Debug.Log("Face points Visualized");
                 }
             }
 
@@ -147,13 +148,16 @@ public class KinectFaceDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //UpdateFacePoints();
+        
         if (_sensor != null)
         {
-            //FaceReader_FrameArrived(_sensor,_faceModel.); //framerefrence
+           // FaceReader_FrameArrived(_sensor,_faceMode); //framerefrence
             Debug.Log(_sensor.UniqueKinectId + "id : " + _faceReader.HighDefinitionFaceFrameSource.IsTrackingIdValid);
             //_sensor.PropertyChanged() += FaceReader_FrameArrived();
+            UpdateFacePointsprefab();
+
         }
     }
-}
+ }
+
 
