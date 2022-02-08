@@ -10,17 +10,34 @@ public class BckColor : MonoBehaviour
         float duration = 6.0F;
 
         public Camera cam;
+        public Light lightsource;
+        bool lightmanipulation;
 
         void Start()
+        {
+        if (!lightsource)
         {
             cam = GetComponent<Camera>();
             cam.clearFlags = CameraClearFlags.SolidColor;
         }
+        if(lightsource)
+        {
+            lightmanipulation = true;
+        }
+        }
 
     void Update()
     {
-        float t = Mathf.PingPong(Time.time, duration)/duration;
-        cam.backgroundColor = Lerp3(color1, color2, color3, t);
+        float t = Mathf.PingPong(Time.time, duration) / duration;
+        if (!lightmanipulation)
+        {
+           
+            cam.backgroundColor = Lerp3(color1, color2, color3, t);
+        }
+        if(lightmanipulation)
+        {
+            lightsource.color = Lerp3(color1, color2, color3, t);
+        }
     }
     Color Lerp3(Color a, Color b, Color c, float t)
     {

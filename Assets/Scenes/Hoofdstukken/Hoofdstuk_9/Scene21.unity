@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 528877778}
   - component: {fileID: 528877777}
   m_Layer: 5
-  m_Name: Kinect
+  m_Name: Kinect dans mierk oud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 64
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 6
@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'beamer: (Midi track crazy little thing audio visual expierence + Kinect!!!!)'
+  m_Text: honkey tonkey women
 --- !u!222 &528877778
 CanvasRenderer:
   m_ObjectHideFlags: 0
