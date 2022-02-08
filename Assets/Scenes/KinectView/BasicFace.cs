@@ -84,7 +84,7 @@ public class BasicFace : MonoBehaviour
             _faceReader = _faceSource.OpenReader();
             _faceReader.FrameArrived += FaceReader_FrameArrived;
 
-            _faceModel = _faceSource.KinectSensor //_faceSource. FaceFrameFeatures; // FaceModel;
+        //    _faceModel = _faceSource.KinectSensor //_faceSource. FaceFrameFeatures; // FaceModel;
             FaceAlignment aligment = Microsoft.Kinect.Face.FaceAlignment.Create();
             _faceAlignment = aligment;//_faceModel.CalculateVerticesForAlignment(aligment) ;
         }

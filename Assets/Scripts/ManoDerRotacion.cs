@@ -16,7 +16,7 @@ public class ManoDerRotacion : MonoBehaviour
     {
         if (objectWithBodySourcViewScipt.GetComponent<BodySourceView1>().user)
         {
-            //float HandAround = objectWithBodySourcViewScipt.GetComponent<BodySourceView>().giroManoDer;
+           // float HandAround = objectWithBodySourcViewScipt.GetComponent<BodySourceView1>().manoDer;
         }
 
         // Rotate the cube by converting the angles into a quaternion.

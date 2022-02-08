@@ -75,20 +75,20 @@ public class CopyLocationBinder : AnimationJobBinder<CopyLocationJob, CopyLocati
             invert = Vector3BoolProperty.Bind(animator, component, PropertyUtils.ConstructConstraintDataPropertyName(nameof(data.invert)))
         };
     }
+    internal static class PropertyUtils
+    {
+        public static string ConstructConstraintDataPropertyName(string property)
+        {
+            return "m_Data." + property;
+        }
+
+        public static string ConstructCustomPropertyName(Component component, string property)
+        {
+            return component.transform.GetInstanceID() + "/" + component.GetType() + "/" + property;
+        }
+    }
 
     public override void Destroy(CopyLocationJob job) { }
-}
-internal static class PropertyUtils
-{
-    public static string ConstructConstraintDataPropertyName(string property)
-    {
-        return "m_Data." + property;
-    }
-
-    public static string ConstructCustomPropertyName(Component component, string property)
-    {
-        return component.transform.GetInstanceID() + "/" + component.GetType() + "/" + property;
-    }
 }
 
 [DisallowMultipleComponent, AddComponentMenu("SIGGRAPH 2019/Copy Location")]

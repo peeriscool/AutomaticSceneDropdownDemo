@@ -17,6 +17,7 @@ public class HombroIzkRotacion : MonoBehaviour
         if (objectWithBodySourcViewScipt.GetComponent<BodySourceView1>().user)
         {
             Z = objectWithBodySourcViewScipt.GetComponent<BodySourceView1>().IzkHombroY;
+            Z = objectWithBodySourcViewScipt.GetComponent<BodySourceView1>().IzkHombroY;
         }
 
         // Rotate the cube by converting the angles into a quaternion.
