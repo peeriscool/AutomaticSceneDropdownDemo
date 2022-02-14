@@ -39,8 +39,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Hoofdstukken/Hoofdstuk_3/Scene9.unity
     guid: 10397f2fdb2b88642aa8e00cf08b6491
   - enabled: 0
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_4/SceneIi.unity
-    guid: e79b117ded0d15145bb1788bf68b6a05
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Hoofdstukken/Hoofdstuk_4/Scene10.unity
     guid: 1e1b12445b71a9b4ca6ee6d09d2263a2
@@ -68,6 +68,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hoofdstukken/Hoofdstuk_8/Scene16.unity
     guid: 55e7ab4bfe6d9b9409e651df216ec7ea
+  - enabled: 1
+    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_8/Scene17.unity
+    guid: fff3b12d875ca3b468bd69b8f7215793
   - enabled: 1
     path: Assets/Scenes/Hoofdstukken/Hoofdstuk_8/Scene18.unity
     guid: 366a22238eeed624282e09da04366771
