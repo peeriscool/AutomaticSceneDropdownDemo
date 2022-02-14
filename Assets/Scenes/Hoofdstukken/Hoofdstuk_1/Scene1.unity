@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 503206771}
   - component: {fileID: 503206770}
   - component: {fileID: 503206769}
+  - component: {fileID: 503206773}
   - component: {fileID: 503206772}
   m_Layer: 0
   m_Name: Camera
@@ -216,13 +217,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 503206768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b7bf44dfb0c784e8d2c5340a2fa361, type: 3}
+  m_Script: {fileID: 11500000, guid: bdfe3ce798b9c8e45819f9cd7db6a6a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   color1: {r: 0, g: 1, b: 0, a: 1}
   color2: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   color3: {r: 1, g: 1, b: 1, a: 1}
-  cam: {fileID: 0}
+  cam: {fileID: 503206770}
+--- !u!114 &503206773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503206768}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eae0d4e3e1337b44b99616f871bd192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color1: {r: 0, g: 1, b: 0, a: 1}
+  color2: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  color3: {r: 1, g: 1, b: 1, a: 1}
+  cam: {fileID: 503206770}
   lightsource: {fileID: 0}
 --- !u!1 &528877775
 GameObject:

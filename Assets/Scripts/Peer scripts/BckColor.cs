@@ -4,37 +4,38 @@ using UnityEngine;
 
 public class BckColor : MonoBehaviour
 {
-        public Color color1 = Color.green;
-        public Color color2 = Color.yellow;
-        public Color color3 = Color.white;
-        float duration = 6.0F;
+    public Color color1 = Color.green;
+    public Color color2 = Color.yellow;
+    public Color color3 = Color.white;
+    float duration = 6.0F;
 
-        public Camera cam;
-        public Light lightsource;
-        bool lightmanipulation;
+    public Camera cam;
+    public Light lightsource;
+    bool lightmanipulation;
 
-        void Start()
-        {
+    void Start()
+    {
         if (!lightsource)
         {
             cam = GetComponent<Camera>();
             cam.clearFlags = CameraClearFlags.SolidColor;
         }
-        if(lightsource)
+        if (lightsource)
         {
             lightmanipulation = true;
         }
-        }
+    }
 
     void Update()
     {
+        
         float t = Mathf.PingPong(Time.time, duration) / duration;
         if (!lightmanipulation)
         {
-           
+
             cam.backgroundColor = Lerp3(color1, color2, color3, t);
         }
-        if(lightmanipulation)
+        if (lightmanipulation)
         {
             lightsource.color = Lerp3(color1, color2, color3, t);
         }
@@ -47,16 +48,4 @@ public class BckColor : MonoBehaviour
             return Color.Lerp(b, c, (t - 0.5f) / 0.5f);
     }
 
-    //float Lerp3(float a, float b, float c, float t)
-    //{
-    //    if (t <= 0.5f)
-    //    {
-    //        return Mathf.Lerp(a, b, t * 2f);
-    //    }
-    //    else
-    //    {
-    //        return Mathf.Lerp(b * 2f, c, t);
-    //    }
-    //}
 }
-
