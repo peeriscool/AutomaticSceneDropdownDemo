@@ -48,10 +48,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Hoofdstukken/Hoofdstuk_5/Scene11.unity
     guid: 98a0d866ead100048a5ba4b3db935053
   - enabled: 1
+    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_5/CrazylittleThing.unity
+    guid: 2e15e85156c795d4f813d24bd774ba48
+  - enabled: 1
     path: Assets/Scenes/Hoofdstukken/Hoofdstuk_6/Pauze.unity
     guid: 22cebc71fff995747b70d7c955dec4e6
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_6/Scene12.unity
+    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_6/naPauze.unity
+    guid: a905ed98fee461848ad825cc9c251744
+  - enabled: 1
+    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_7/Scene12.unity
     guid: 4ccd31a18ee23cb4a92f53aaa88f0f3b
   - enabled: 1
     path: Assets/Scenes/Hoofdstukken/Hoofdstuk_7/Scene13.unity
@@ -59,13 +65,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hoofdstukken/Hoofdstuk_7/Scene14.unity
     guid: 4f91f1439030a3f4fb58edb9dd442f7e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Hoofdstukken/Hoofdstuk_7/SceneDennis.unity
     guid: 153d64f03d5a20640abe6e0fdbfcda80
   - enabled: 0
     path: Assets/Scenes/Hoofdstukken/Hoofdstuk_7/SceneP.unity
     guid: 87a3f77a4e4ccfe4e8bbd28bc7e9f3ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Hoofdstukken/Hoofdstuk_8/Scene15.unity
     guid: ca23218829f46c44eaee5c863df8f3e1
   - enabled: 1

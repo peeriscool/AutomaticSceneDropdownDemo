@@ -4,6 +4,7 @@ using System.Collections;
 //http://www.41post.com/4742/programming/unity-animated-texture-from-image-sequence-part-2.
 public class ImageSequenceSingleTexture : MonoBehaviour
 {
+    public bool Playreversedbool;
     //A texture object that will output the animation  
     private Texture texture;
     //With this Material object, a reference to the game object Material can be stored  
@@ -36,13 +37,22 @@ public class ImageSequenceSingleTexture : MonoBehaviour
         //set the initial frame as the first texture. Load it from the first image on the folder  
         texture = (Texture)Resources.Load(baseName + "00000", typeof(Texture));
      //   GameObject.Find("curtain").GetComponent<MeshRenderer>().enabled = true;
+     
     }
 
     void Update()
     {
-        //Start the 'PlayLoop' method as a coroutine with a 0.04 delay  
-        StartCoroutine("Play", 0.04f);
-       
+        if (Playreversedbool)
+        {
+            StartCoroutine("Playreversed", 0.04f);
+        }
+        else
+        {
+            //Start the 'PlayLoop' method as a coroutine with a 0.04 delay  
+            StartCoroutine("Play", 0.04f);
+        }
+      
+
         //Set the material's texture to the current value of the frameCounter variable  
         goMaterial.mainTexture = this.texture;
     }
