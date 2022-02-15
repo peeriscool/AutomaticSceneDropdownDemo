@@ -24,10 +24,18 @@ using UnityEngine.SceneManagement;
             i++;
             OpenScene(i);
         }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            i--;      
+            OpenScene(i);
         }
+    }
     private static void OpenScene(int value)
     {
-        DontDestroyOnLoad(Owner);
+        if (GameObject.Find("Scriptholder").gameObject == Owner)
+            {
+            DontDestroyOnLoad(Owner);
+        }
         //  SceneManager.GetSceneByBuildIndex(value);
         if (value < SceneManager.sceneCountInBuildSettings)
         {
