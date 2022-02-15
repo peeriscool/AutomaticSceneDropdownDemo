@@ -6,10 +6,11 @@ using UnityEngine;
 public class StarController : MonoBehaviour
 {
     public GameObject lightrefrence;
-    GameObject[] lightpoints;
-   public int amount = 10;
+    public int amount = 10;
+    public bool shiftstars;
+    public float waitTime = 6f;
     float timer = 0.0f;
-   public float waitTime = 6f;
+    GameObject[] lightpoints;
     void Start()
     {
         lightpoints = new GameObject[amount];
@@ -26,21 +27,39 @@ public class StarController : MonoBehaviour
     }
     void Update()
     {
-        timer += Time.deltaTime;
-
-        // Check if we have reached beyond x seconds.
-        // Subtracting two is more accurate over time than resetting to zero.
-        if (timer > waitTime)
+        if (Input.GetKeyDown(KeyCode.Minus)) { Time.timeScale -= 0.1f; Debug.Log(Time.timeScale); }
+        if (Input.GetKeyDown(KeyCode.Equals)){ Time.timeScale += 0.1f; Debug.Log(Time.timeScale); }
+        if (Input.GetKeyDown(KeyCode.LeftBracket))
         {
-            Debug.Log(timer);
-            //visualTime = timer;
-
-            // Remove the recorded 2 seconds.
-            timelightscale();
-            timer = timer - waitTime;
-            // Time.timeScale = scrollBar;
-           
+            float movefactor = -3000f;
+            foreach (Transform body in lightrefrence.transform)
+            { body.transform.position = new Vector3(body.transform.position.x, Mathf.Lerp(body.transform.position.y, movefactor, Time.deltaTime), body.transform.position.z); }
         }
+        if (Input.GetKeyDown(KeyCode.RightBracket))
+        {
+            float movefactor = 3000f;
+            foreach (Transform body in lightrefrence.transform)
+            { body.transform.position = new Vector3(body.transform.position.x, Mathf.Lerp(body.transform.position.y, movefactor, Time.deltaTime), body.transform.position.z); }
+        }
+        if (shiftstars)
+        {
+            timer += Time.deltaTime;
+
+            // Check if we have reached beyond x seconds.
+            // Subtracting two is more accurate over time than resetting to zero.
+            if (timer > waitTime)
+            {
+                Debug.Log(timer);
+                //visualTime = timer;
+
+                // Remove the recorded 2 seconds.
+                timelightscale();
+                timer = timer - waitTime;
+                // Time.timeScale = scrollBar;
+
+            }
+        }
+       
         foreach (Transform light in lightrefrence.transform)
         {
 

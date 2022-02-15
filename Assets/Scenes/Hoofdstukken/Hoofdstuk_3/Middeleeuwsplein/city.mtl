@@ -1,0 +1,395 @@
+# Blender MTL File: 'city.blend'
+# Material Count: 33
+
+newmtl Boards
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 1.630000 mediavl house 3\\textures\\Bark_004_normal.jpg
+map_Ns mediavl house 3\\textures\\Bark_004_roughness.jpg
+
+newmtl Floor
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump mediavl house 3\\textures\\Planks012_2K_Normal.jpg
+map_Kd mediavl house 3\\textures\\Planks012_2K_Color.jpg
+map_Ns mediavl house 3\\textures\\Planks012_2K_Roughness.jpg
+
+newmtl Floor.001
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump Mediavl house 4\\textures\\Planks012_2K_Normal.jpg
+map_Kd Mediavl house 4\\textures\\Planks012_2K_Color.jpg
+map_Ns Mediavl house 4\\textures\\Planks012_2K_Roughness.jpg
+
+newmtl Floor_2
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump Mediavl house 4\\textures\\old_planks_02_nor_2k.jpg
+map_Kd Mediavl house 4\\textures\\old_planks_02_diff_2k.jpg
+map_Ns Mediavl house 4\\textures\\old_planks_02_rough_2k.jpg
+
+newmtl Funnel
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump Mediavl house 4\\textures\\castle_wall_slates_nor_2k.jpg
+map_Kd Mediavl house 4\\textures\\castle_wall_slates_diff_2k.jpg
+map_Ns Mediavl house 4\\textures\\castle_wall_slates_rough_2k.jpg
+
+newmtl Material.001
+Ns 71.479323
+Ka 1.000000 1.000000 1.000000
+Kd 0.049549 0.049549 0.049549
+Ks 0.200000 0.200000 0.200000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 3.200000 -s 12.000000 12.000000 12.000000 G:\\My Drive\\The Working Directory\\3D & Textures\\Peer Ultimate Texture Folder\\textures\\Ground Textures\\Grass\\grass normal map.png
+
+newmtl Material.002
+Ns 374.950391
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Bump -bm 0.700000 -s 6.000000 6.000000 6.000000 G:\\My Drive\\The Working Directory\\3D & Textures\\Peer Ultimate Texture Folder\\textures\\Ground Textures\\ground_seamless_normal_map.png
+map_Ks G:\\My Drive\\The Working Directory\\3D & Textures\\Peer Ultimate Texture Folder\\textures\\Ground Textures\\ground_seamless_gloss.png
+
+newmtl Material__14
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd G:\\My Drive\\The Working Directory\\3D & Textures\\3D libary\\Nature\\Gledista_Triacanthos_OBJ\\maps\\gleditsia triacanthos flowers color.jpg
+map_d G:\\My Drive\\The Working Directory\\3D & Textures\\3D libary\\Nature\\Gledista_Triacanthos_OBJ\\maps\\gleditsia triacanthos flowers mask.jpg
+
+newmtl Material__5
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd G:\\My Drive\\The Working Directory\\3D & Textures\\3D libary\\Nature\\Gledista_Triacanthos_OBJ\\maps\\gleditsia triacanthos bark reflect.jpg
+
+newmtl Material__6
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd G:\\My Drive\\The Working Directory\\3D & Textures\\3D libary\\Nature\\Gledista_Triacanthos_OBJ\\maps\\gleditsia triacanthos bark2 a1.jpg
+
+newmtl Material__8
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd G:\\My Drive\\The Working Directory\\3D & Textures\\3D libary\\Nature\\Gledista_Triacanthos_OBJ\\maps\\gleditsia triacanthos leaf color b1.jpg
+map_d G:\\My Drive\\The Working Directory\\3D & Textures\\3D libary\\Nature\\Gledista_Triacanthos_OBJ\\maps\\gleditsia triacanthos leaf mask.jpg
+
+newmtl Metal
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump mediavl house 3\\textures\\Metal005_2K_Normal.jpg
+map_Ns mediavl house 3\\textures\\Metal005_2K_Roughness.jpg
+
+newmtl Metal.001
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump Mediavl house 4\\textures\\Metal005_2K_Normal.jpg
+map_Kd Mediavl house 4\\textures\\Metal005_2K_Color.jpg
+map_Ns Mediavl house 4\\textures\\Metal005_2K_Roughness.jpg
+
+newmtl Metal2
+Ns 699.842965
+Ka 0.705455 0.705455 0.705455
+Kd 0.347888 0.347888 0.347888
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Metal2.001
+Ns 699.842965
+Ka 0.807273 0.807273 0.807273
+Kd 0.347888 0.347888 0.347888
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl No_material
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Roof
+Ns 225.000000
+Ka 0.654545 0.654545 0.654545
+Kd 0.800000 0.800000 0.800000
+Ks 0.240909 0.240909 0.240909
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump mediavl house 3\\textures\\roof_tiles_14_nor_2k.jpg
+map_Ns mediavl house 3\\textures\\roof_tiles_14_rough_2k.jpg
+
+newmtl Roof_2
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump Mediavl house 4\\textures\\roof_tiles_14_nor_4k.jpg
+map_Kd Mediavl house 4\\textures\\roof_tiles_14_diff_4k.jpg
+map_Ns Mediavl house 4\\textures\\roof_tiles_14_rough_4k.jpg
+
+newmtl Stone
+Ns 17.361113
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 2.800000 mediavl house 3\\textures\\castle_wall_varriation_nor_2k.jpg
+map_Kd mediavl house 3\\textures\\castle_wall_varriation_diff_2k.jpg
+map_Ns mediavl house 3\\textures\\castle_wall_varriation_rough_2k.jpg
+
+newmtl Wall
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump mediavl house 3\\textures\\Plaster001_2K_Normal.jpg
+
+newmtl Wall.001
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump Mediavl house 4\\textures\\Plaster001_2K_Normal.jpg
+map_Kd Mediavl house 4\\textures\\Plaster001_2K_Color.jpg
+map_Ns Mediavl house 4\\textures\\Plaster001_2K_Roughness.jpg
+
+newmtl Wall_2
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 2.000000 Mediavl house 4\\textures\\medieval_blocks_03_nor_2k.jpg
+map_Kd Mediavl house 4\\textures\\medieval_blocks_03_diff_2k.jpg
+map_Ns Mediavl house 4\\textures\\medieval_blocks_03_rough_2k.jpg
+
+newmtl Wood
+Ns 25.000006
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 2.750000 mediavl house 3\\textures\\Wood039_2K_Normal.jpg
+map_Ns mediavl house 3\\textures\\Wood039_2K_Roughness.jpg
+
+newmtl Wood.001
+Ns 25.000006
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump Mediavl house 4\\textures\\Wood039_2K_Normal.jpg
+map_Ns Mediavl house 4\\textures\\Wood039_2K_Roughness.jpg
+
+newmtl Wood_planks
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 1.980000 Mediavl house 4\\textures\\Bark_004_normal.jpg
+map_Kd Mediavl house 4\\textures\\Bark_004_basecolor.jpg
+map_Ns Mediavl house 4\\textures\\Bark_004_roughness.jpg
+
+newmtl Wood_wind
+Ns 25.000006
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump Mediavl house 4\\textures\\rough_wood_nor_4k.jpg
+map_Kd Mediavl house 4\\textures\\rough_wood_Diff_4k.jpg
+map_Ns Mediavl house 4\\textures\\rough_wood_rough_4k.jpg
+
+newmtl Wood_windows
+Ns 25.000006
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 1.860000 mediavl house 3\\textures\\Wood037_2K_Normal.jpg
+map_Ns mediavl house 3\\textures\\Wood037_2K_Roughness.jpg
+
+newmtl blinn1SG
+Ns 0.060000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Bump House_obj\\house_normal.tga
+map_Kd House_obj\\house_diffuse.tga
+map_Ks House_obj\\house_spec.tga
+
+newmtl house_base
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump Map #9
+refl textures\\house_vray_Reflection.png
+
+newmtl house_foliage
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\LRRH\\max_project_files\\sceneassets\\images\\House_1_textures\\vray\\house_vray_Diffuse.png
+
+newmtl house_glass
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl windmill_001_base_COL_jpg
+Ns 1.300798
+Ka 1.000000 1.000000 1.000000
+Kd 0.698000 0.698000 0.698000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd windmill\\textures\\windmill_001_base_COL.jpg
+
+newmtl windmill_001_lopatky_COL_jpg
+Ns 1.300798
+Ka 1.000000 1.000000 1.000000
+Kd 0.698000 0.698000 0.698000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd windmill\\textures\\windmill_001_lopatky_COL.jpg
