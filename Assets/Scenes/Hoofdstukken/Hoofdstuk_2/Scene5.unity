@@ -195,7 +195,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Vidoe optocht
+  m_Text: Video optocht
 --- !u!222 &528877778
 CanvasRenderer:
   m_ObjectHideFlags: 0
