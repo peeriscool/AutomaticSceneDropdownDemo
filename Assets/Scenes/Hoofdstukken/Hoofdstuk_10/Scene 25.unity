@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 70264806}
   - component: {fileID: 70264805}
   - component: {fileID: 70264804}
+  - component: {fileID: 70264807}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -4921,13 +4922,25 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70264803}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 3.46}
+  m_LocalRotation: {x: -0.99998623, y: -0, z: -0, w: 0.0052510323}
+  m_LocalPosition: {x: 0, y: -0.57, z: 3.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -179.398, y: 0, z: 0}
+--- !u!114 &70264807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70264803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae13c6f8c4fbbb4cb14d82d19e4a3e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &528877775
 GameObject:
   m_ObjectHideFlags: 0
@@ -4972,7 +4985,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528877775}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -5144,7 +5157,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -5157,7 +5170,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: -10.01
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -5200,7 +5213,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1899005456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b7bf44dfb0c784e8d2c5340a2fa361, type: 3}
+  m_Script: {fileID: 11500000, guid: bdfe3ce798b9c8e45819f9cd7db6a6a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   color1: {r: 0, g: 1, b: 0, a: 1}

@@ -48,18 +48,13 @@ public class ImageOrderCanvas : MonoBehaviour
         displayed = DisplayHost.AddComponent<Image>();
         aspect =  DisplayHost.AddComponent<AspectRatioFitter>();
         DisplayHost.transform.position = new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0);
-        DisplayHost.transform.localScale *= scaleOfImage; //sets the base scale for all the images
+        DisplayHost.transform.localScale  = new Vector3(0.8f,0.3f);//*= scaleOfImage; //sets the base scale for all the images
         DisplayHost.transform.parent = owner.gameObject.transform;
         aspect.aspectMode = AspectRatioFitter.AspectMode.EnvelopeParent;
         // displayed = DisplayHost.GetComponent<Image>();
     }
     void Keypressed()
     {
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            Debug.Log("Pressed A");
-        }
-        
         if (Input.GetKeyDown(KeyCode.Minus))
         {
             ImageIndex--;
@@ -74,11 +69,11 @@ public class ImageOrderCanvas : MonoBehaviour
     }
     void AssignIndexToImage()
     {
-        //Image Viewable = DisplayHost.GetComponent<Image>();
         displayed.sprite = Prins[ImageIndex].sprite;
+        //Image Viewable = DisplayHost.GetComponent<Image>();
         //Viewable.SetNativeSize(Prins[ImageIndex].sprite.rect); // = Prins[ImageIndex].preferredWidth;
-       // DisplayHost.GetComponent<Image>().sprite = Prins[ImageIndex].sprite;
-       //  DisplayHost.GetComponent<Image>().rectTransform = Prins[ImageIndex].rectTransform;
+        // DisplayHost.GetComponent<Image>().sprite = Prins[ImageIndex].sprite;
+        //  DisplayHost.GetComponent<Image>().rectTransform = Prins[ImageIndex].rectTransform;
     }
 }
 

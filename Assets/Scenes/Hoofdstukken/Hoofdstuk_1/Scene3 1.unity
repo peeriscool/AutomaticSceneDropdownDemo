@@ -257,7 +257,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 427648531710047994, guid: 9041b3ad5bb88f34f8f76f587767ae42, type: 3}
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4198,12 +4198,12 @@ ParticleSystem:
   TrailModule:
     enabled: 1
     mode: 0
-    ratio: 0.64
+    ratio: 0.18
     lifetime:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0.21
-      minScalar: 1
+      minMaxState: 3
+      scalar: 0.34
+      minScalar: 0.03
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4268,7 +4268,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.2994864, g: 1, b: 0.042452812, a: 1}
+      maxColor: {r: 0.26639342, g: 1, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
