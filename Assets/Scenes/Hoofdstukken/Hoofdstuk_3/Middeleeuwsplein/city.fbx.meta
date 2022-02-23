@@ -7,8 +7,73 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Floor 2
+    second: {fileID: 2100000, guid: 683f1909656dfbd44b19a8d106c5ee69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Funnel
+    second: {fileID: 2100000, guid: 10a4c0c06899f6b478397ae18efb361f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 804f3adaafa15444c83da4c7d0c01dc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 271f5f59bf8c6d746b216fd6ba8224a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof
+    second: {fileID: 2100000, guid: 1368bc3e04258ec41b67c22e4e67c3ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof 2
+    second: {fileID: 2100000, guid: 283cd5fdcb8e1a54a8f6b3d8c9954881, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Wall
     second: {fileID: 2100000, guid: b7a08f9976b28184a873780723836eb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall 2
+    second: {fileID: 2100000, guid: cd3dd71a5a933d44f94b7a6fb33d5c5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall.001
+    second: {fileID: 2100000, guid: 355e35dcff8a4704dabb00eed1f75bf6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: 6af705acf6b48604080142ec03eb5190, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood wind
+    second: {fileID: 2100000, guid: 74a10b5b0d67065419e6704e9fe9236a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood windows
+    second: {fileID: 2100000, guid: 2de9abb2b4e4a704db59df4d3eea00d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood.001
+    second: {fileID: 2100000, guid: d7be2120d4558a84a809fd9333127780, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: house_foliage
+    second: {fileID: 2100000, guid: 3304b0bc1c3c7e54380bd86a7ea3664c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

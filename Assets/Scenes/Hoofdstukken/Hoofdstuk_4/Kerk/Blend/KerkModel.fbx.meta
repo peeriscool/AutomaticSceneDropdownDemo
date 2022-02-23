@@ -3,7 +3,37 @@ guid: 90e491304c42837458f64eb5fa5d88a4
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BladePlasticSmoothShade
+    second: {fileID: 2100000, guid: 530ba59762d7654448ce0d30c9049a84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChurchBrickFlateShade
+    second: {fileID: 2100000, guid: fa79eef3a0d75184c99db5000ce2fece, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkStoneFlatShade
+    second: {fileID: 2100000, guid: 0fa1a2fb5ffc0c64cbf3ee4638422275, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorWoodSmoothShade
+    second: {fileID: 2100000, guid: 68c3091a1500e0745bdf42da174bddf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightStoneFlatShade
+    second: {fileID: 2100000, guid: db7eebc3c6b1f98448baf376cca06dfc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightStoneSmoothShade
+    second: {fileID: 2100000, guid: a22ba6980287ee54680a40c7fefba938, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

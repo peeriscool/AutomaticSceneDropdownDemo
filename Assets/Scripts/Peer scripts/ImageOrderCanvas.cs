@@ -16,7 +16,7 @@ public class ImageOrderCanvas : MonoBehaviour
     Image displayed;
     AspectRatioFitter aspect;
     Canvas owner;
-    int ImageIndex = 0;
+    int ImageIndex = -1;
 
     void Start()
     {
