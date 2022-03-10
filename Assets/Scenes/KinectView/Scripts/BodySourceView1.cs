@@ -200,7 +200,8 @@ public class BodySourceView1 : MonoBehaviour
             GameObject jointObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
 
 
-            //al cubo joint lo escala, le da un nombre y lo asigna al cuerpo             
+            //al cubo joint lo escala, le da un nombre y lo asigna al cuerpo
+            //schaalt de gewrichtskubus, geeft het een naam en wijst het toe aan het lichaam
             jointObj.transform.localScale = new Vector3(0.000005f, 0.000005f, 0.000005f);
             //jointObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
 
@@ -231,6 +232,7 @@ public class BodySourceView1 : MonoBehaviour
             //luego de encontrar el correspondiente joint, le da su correspondiente ubicación
             jointObj.localPosition = GetVector3FromJoint(sourceJoint);
 
+            //slaat de locatie van elk lichaamsgewricht op in een variabele
             //guarda la ubicación de cada joint del cuerpo en una variable
             if (jt.ToString().Equals("HandLeft"))
             {
@@ -332,7 +334,7 @@ public class BodySourceView1 : MonoBehaviour
             if (jt.ToString().Equals("SpineBase"))
             {
                 pelvisSpineBase = GetVector3FromJoint(sourceJoint);
-                //print(pelvisSpineBase.x + "   " + pelvisSpineBase.y + "   " + pelvisSpineBase.z);
+               // print(pelvisSpineBase.x + "   " + pelvisSpineBase.y + "   " + pelvisSpineBase.z);
             }
             
 
@@ -359,6 +361,7 @@ public class BodySourceView1 : MonoBehaviour
     public static Vector3 GetVector3FromJoint(Kinect.Joint joint)
     {
         //return new Vector3(joint.Position.X, joint.Position.Y, joint.Position.Z);
+        //2.8 seems about right
         return new Vector3(joint.Position.X*2.8f, joint.Position.Y* 2.8f, joint.Position.Z* 2.8f);
     }
 
