@@ -8,7 +8,6 @@ public class ParticleOwner : MonoBehaviour
     ParticleSystem controlledSystem;
     ParticleSystem.Particle[] _particles;
    
-    // Start is called before the first frame update
     void Start()
     {
         controlledSystem = this.GetComponent<ParticleSystem>();
@@ -20,7 +19,6 @@ public class ParticleOwner : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.X))
@@ -62,12 +60,5 @@ public class ParticleOwner : MonoBehaviour
             }
             controlledSystem.SetParticles(_particles);
         }
-
     }
-    private void LateUpdate()
-    {
-       
-    }
-
-  
 }

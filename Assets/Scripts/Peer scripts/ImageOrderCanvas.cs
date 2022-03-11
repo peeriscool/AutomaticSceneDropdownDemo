@@ -49,8 +49,6 @@ public class ImageOrderCanvas : MonoBehaviour
         DisplayHost.transform.position = new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0);
         DisplayHost.transform.localScale  = new Vector3(1f,0.5f);//*= scaleOfImage; //sets the base scale for all the images
         DisplayHost.transform.parent = owner.gameObject.transform;
-        
-        // displayed = DisplayHost.GetComponent<Image>();
     }
     void Keypressed()
     {
@@ -70,9 +68,5 @@ public class ImageOrderCanvas : MonoBehaviour
     {
         displayed.sprite = Prins[ImageIndex].sprite;
         aspect.aspectMode = AspectRatioFitter.AspectMode.EnvelopeParent;
-        //Image Viewable = DisplayHost.GetComponent<Image>();
-        //Viewable.SetNativeSize(Prins[ImageIndex].sprite.rect); // = Prins[ImageIndex].preferredWidth;
-        // DisplayHost.GetComponent<Image>().sprite = Prins[ImageIndex].sprite;
-        //  DisplayHost.GetComponent<Image>().rectTransform = Prins[ImageIndex].rectTransform;
     }
 }
