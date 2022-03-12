@@ -6,102 +6,102 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/MainScene.unity
+    path: Assets/Scenes/01_Oorsprong/Scene_0_Main.unity
     guid: d244321ac81fff5438811290c36a2e00
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_1/Intro.unity
+    path: Assets/Scenes/01_Oorsprong/Oorsprong_00.unity
     guid: 18ded700821f2464d8dca7e33d588467
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_1/Scene1.unity
+    path: Assets/Scenes/01_Oorsprong/Oorsprong_01.unity
     guid: 7fc447a0ba87d5c4e969d5addabe9212
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_1/Scene2.unity
+    path: Assets/Scenes/01_Oorsprong/Oorsprong_02.unity
     guid: ba425fdacab36af47b2a7d3b2a28bdbc
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_1/Scene3.unity
+    path: Assets/Scenes/01_Oorsprong/Oorsprong_04.unity
     guid: 850602d88d37a2141b9e5ddd6597c514
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_1/Scene3 1.unity
+    path: Assets/Scenes/01_Oorsprong/Oorsprong_03.unity
     guid: d90cd503522f2b242b57d23476281021
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_2/Scene4.unity
+    path: Assets/Scenes/02_BlauweSchuijt/BLauweSchuijt_05.unity
     guid: baf98d22696e01648a57f1211aaba027
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_2/Scene5.unity
+    path: Assets/Scenes/02_BlauweSchuijt/BLauweSchuijt_06.unity
     guid: de76f3582faadd745bb62161dde56809
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_2/Scene6.unity
+    path: Assets/Scenes/02_BlauweSchuijt/BLauweSchuijt_07.unity
     guid: 0d8847fc7dda9ab41af020903b13b8ea
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_2/Scene7.unity
+    path: Assets/Scenes/02_BlauweSchuijt/BLauweSchuijt_08.unity
     guid: 88e13707c6b9ff7439fd781b4426439a
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_3/Scene8.unity
+    path: Assets/Scenes/03_DePrins/DePrins_09.unity
     guid: 51e5fe86766be564b9a037609a487625
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_3/Scene9.unity
+    path: Assets/Scenes/03_DePrins/DePrins_10.unity
     guid: 10397f2fdb2b88642aa8e00cf08b6491
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_4/Scene10.unity
+    path: Assets/Scenes/Hoofdstuk_4/Scene10.unity
     guid: 1e1b12445b71a9b4ca6ee6d09d2263a2
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_5/Scene11.unity
+    path: Assets/Scenes/Hoofdstuk_5/Scene11.unity
     guid: 98a0d866ead100048a5ba4b3db935053
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_5/CrazylittleThing.unity
+    path: Assets/Scenes/Hoofdstuk_5/CrazylittleThing.unity
     guid: 2e15e85156c795d4f813d24bd774ba48
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_6/Pauze.unity
+    path: Assets/Scenes/Hoofdstuk_6/Pauze.unity
     guid: 22cebc71fff995747b70d7c955dec4e6
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_6/naPauze.unity
+    path: Assets/Scenes/Hoofdstuk_6/naPauze.unity
     guid: a905ed98fee461848ad825cc9c251744
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_7/Scene12.unity
+    path: Assets/Scenes/Hoofdstuk_7/Scene12.unity
     guid: 4ccd31a18ee23cb4a92f53aaa88f0f3b
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_7/Scene13.unity
+    path: Assets/Scenes/Hoofdstuk_7/Scene13.unity
     guid: 17fd794541f672648b3ebfa04d8a95aa
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_7/Scene14.unity
+    path: Assets/Scenes/Hoofdstuk_7/Scene14.unity
     guid: 4f91f1439030a3f4fb58edb9dd442f7e
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_7/SceneDennis.unity
+    path: Assets/Scenes/Hoofdstuk_7/SceneDennis.unity
     guid: 153d64f03d5a20640abe6e0fdbfcda80
   - enabled: 0
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_7/SceneP.unity
+    path: Assets/Scenes/Hoofdstuk_7/SceneP.unity
     guid: 87a3f77a4e4ccfe4e8bbd28bc7e9f3ab
   - enabled: 0
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_8/Scene15.unity
+    path: Assets/Scenes/Hoofdstuk_8/Scene15.unity
     guid: ca23218829f46c44eaee5c863df8f3e1
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_8/Scene16.unity
+    path: Assets/Scenes/Hoofdstuk_8/Scene16.unity
     guid: 55e7ab4bfe6d9b9409e651df216ec7ea
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_8/Scene17.unity
+    path: Assets/Scenes/Hoofdstuk_8/Scene17.unity
     guid: fff3b12d875ca3b468bd69b8f7215793
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_8/Scene18.unity
+    path: Assets/Scenes/Hoofdstuk_8/Scene18.unity
     guid: 366a22238eeed624282e09da04366771
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_9/Scene19.unity
+    path: Assets/Scenes/Hoofdstuk_9/Scene19.unity
     guid: 0cddd72b9269c7143ba20e5d419e292d
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_9/Scene20.unity
+    path: Assets/Scenes/Hoofdstuk_9/Scene20.unity
     guid: 737f8318d16e9ff45aea3973d8697f75
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_9/Scene21.unity
+    path: Assets/Scenes/Hoofdstuk_9/Scene21.unity
     guid: 6497024ed7d03f240a997a214fcbd015
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_10/Scene23.unity
+    path: Assets/Scenes/Hoofdstuk_10/Scene23.unity
     guid: db39ddb3eb2a17a4799f610439242e8f
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_10/Scene 25.unity
+    path: Assets/Scenes/Hoofdstuk_10/Scene 25.unity
     guid: 7b08fe26a1ed21345b40ac78a75b935e
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_11/Scene26.unity
+    path: Assets/Scenes/Hoofdstuk_11/Scene26.unity
     guid: 3b31b4e30328ee140b1b44d0a5fdc266
   - enabled: 1
-    path: Assets/Scenes/Hoofdstukken/Hoofdstuk_11/Scene27.unity
+    path: Assets/Scenes/Hoofdstuk_11/Scene27.unity
     guid: f40487f8f9f6f5747bd70e488aa053bd
   m_configObjects: {}

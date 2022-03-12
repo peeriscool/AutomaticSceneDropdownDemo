@@ -577,7 +577,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.9150943, g: 0.8195921, b: 0.66042185, a: 1}
-  m_Intensity: 11.4
+  m_Intensity: 69.91
   m_Range: 41.48
   m_SpotAngle: 80
   m_InnerSpotAngle: 21.80208
@@ -1139,10 +1139,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999178050ffa16247a2e59ca9a64c8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainSpeed: 100
-  shiftAdd: 250
-  maxShift: 1000
-  camSens: 0.25
-  Auto: 1
-  mouseSensitivity: 5
-  isColliding: 1
