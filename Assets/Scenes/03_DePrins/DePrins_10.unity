@@ -219,7 +219,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 325f4a1cd1c859d498deaf097ee647fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateAmount: {x: 20, y: 0, z: 0}
+--- !u!114 &625819844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625819841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c674ff9c0c4a4e840a72e02c5e44806a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
 --- !u!1 &811431724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,13 +1262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999178050ffa16247a2e59ca9a64c8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainSpeed: 100
-  shiftAdd: 250
-  maxShift: 1000
-  camSens: 0.25
-  Auto: 0
-  mouseSensitivity: 5
-  isColliding: 1
 --- !u!4 &543450653561449310
 Transform:
   m_ObjectHideFlags: 0
