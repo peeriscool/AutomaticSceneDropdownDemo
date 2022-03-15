@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class StarController : MonoBehaviour
 {
@@ -60,11 +61,7 @@ public class StarController : MonoBehaviour
             }
         }
        
-        foreach (Transform light in lightrefrence.transform)
-        {
-
-            updatelight(light.GetComponent<Light>());
-        }
+        
 
         //if(Input.GetKeyDown(KeyCode.Equals))
         //{
@@ -73,7 +70,15 @@ public class StarController : MonoBehaviour
 
         // cam.backgroundColor = Lerp3(color1, color2, color3, t);
     }
+    private void LateUpdate()
+    {
+        foreach (Transform light in lightrefrence.transform)
+        {
 
+            updatelight(light.GetComponent<Light>());
+            updatehalo(light.GetComponent<Light>());
+        }
+    }
 
     void timelightscale() //used to distord location in a scaleable way
     {
@@ -89,7 +94,11 @@ public class StarController : MonoBehaviour
     void updatelight(Light input)
     {
 
-        input.intensity = Mathf.PingPong(Time.time, 3f) + Random.Range(0.5f,Time.deltaTime);
+        input.intensity = Mathf.PingPong(Time.time, 3f) + Random.Range(0.1f,Time.deltaTime);
+    }
+    void updatehalo(Light input)
+    {
+        input.range = Mathf.SmoothStep(input.range,Random.Range(2,5), Time.time * 4);
     }
     Color Lerp3(Color a, Color b, Color c, float t)
     {

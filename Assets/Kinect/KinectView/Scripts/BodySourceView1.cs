@@ -27,7 +27,6 @@ public class BodySourceView1 : MonoBehaviour
     private Quaternion DerechaMano;
     private Quaternion IzquierdaMano;
 
-
     public GameObject DerMano;
     public GameObject IzkMano;
     public GameObject DerPie;
@@ -272,13 +271,13 @@ public class BodySourceView1 : MonoBehaviour
             if (jt.ToString().Equals("ShoulderLeft"))
             {
                 hombroIzk = GetQuaternionJoint(body, jt);
-                IzkHombroY = map(hombroIzk.x, 0.70f, 0.80f, 0, -30);
+            //    IzkHombroY = map(hombroIzk.x, 0.70f, 0.80f, 0, -30);
             }
 
             if (jt.ToString().Equals("ShoulderRight"))
             {
                 hombroDer = GetQuaternionJoint(body, jt);
-                DerHombroY = map(hombroDer.x, 0.80f, 0.70f, 0, -30);
+             //   DerHombroY = map(hombroDer.x, 0.80f, 0.70f, 0, -30);
             }
 
             if (jt.ToString().Equals("AnkleLeft"))
@@ -293,7 +292,7 @@ public class BodySourceView1 : MonoBehaviour
                 }
                 else
                 {
-                    tobilloIzkY = map(tobilloIzk.x, 0.9f, -0.5f, 50, 170);
+              //      tobilloIzkY = map(tobilloIzk.x, 0.9f, -0.5f, 50, 170);
                 }
             }
 
@@ -303,7 +302,7 @@ public class BodySourceView1 : MonoBehaviour
                 //print(pieDer.x + "   " + pieDer.y + "   " + pieDer.z);
 
                 tobilloDer = GetQuaternionJoint(body, jt);
-                tobilloDerY = map(tobilloDer.x, 0.9f, 0.3f,-30, -160);
+              //  tobilloDerY = map(tobilloDer.x, 0.9f, 0.3f,-30, -160);
             }
                 
             if (jt.ToString().Equals("Neck"))
@@ -333,6 +332,7 @@ public class BodySourceView1 : MonoBehaviour
 
             if (jt.ToString().Equals("SpineBase"))
             {
+              //  Debug.Log("assigent spine vector3 = " + GetVector3FromJoint(sourceJoint));
                 pelvisSpineBase = GetVector3FromJoint(sourceJoint);
                // print(pelvisSpineBase.x + "   " + pelvisSpineBase.y + "   " + pelvisSpineBase.z);
             }
