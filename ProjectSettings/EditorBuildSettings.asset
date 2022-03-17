@@ -12,16 +12,19 @@ EditorBuildSettings:
     path: Assets/Scenes/01_Oorsprong/Oorsprong_00.unity
     guid: 18ded700821f2464d8dca7e33d588467
   - enabled: 1
+    path: Assets/Scenes/01_Oorsprong/Oorsprong_03_newyork.unity
+    guid: 7fc447a0ba87d5c4e969d5addabe9212
+  - enabled: 1
+    path: Assets/Scenes/01_Oorsprong/orange.unity
+    guid: 1f817444f73ff2e46b3e1a4558c2f7ba
+  - enabled: 1
     path: Assets/Scenes/01_Oorsprong/Oorsprong_02.unity
     guid: ba425fdacab36af47b2a7d3b2a28bdbc
   - enabled: 1
     path: Assets/Scenes/01_Oorsprong/Oorsprong_04.unity
     guid: 850602d88d37a2141b9e5ddd6597c514
   - enabled: 1
-    path: Assets/Scenes/01_Oorsprong/Oorsprong_03_You are the sunshine.unity
-    guid: 7fc447a0ba87d5c4e969d5addabe9212
-  - enabled: 1
-    path: Assets/Scenes/01_Oorsprong/Oorsprong_03.unity
+    path: Assets/Scenes/01_Oorsprong/Oorsprong_03_Sunshine.unity
     guid: d90cd503522f2b242b57d23476281021
   - enabled: 1
     path: Assets/Scenes/02_BlauweSchuijt/BLauweSchuijt_05.unity
@@ -36,11 +39,14 @@ EditorBuildSettings:
     path: Assets/Scenes/02_BlauweSchuijt/BLauweSchuijt_08.unity
     guid: 88e13707c6b9ff7439fd781b4426439a
   - enabled: 1
+    path: Assets/Scenes/03_DePrins/DePrins_10.unity
+    guid: 10397f2fdb2b88642aa8e00cf08b6491
+  - enabled: 1
     path: Assets/Scenes/03_DePrins/DePrins_09.unity
     guid: 51e5fe86766be564b9a037609a487625
   - enabled: 1
-    path: Assets/Scenes/03_DePrins/DePrins_10.unity
-    guid: 10397f2fdb2b88642aa8e00cf08b6491
+    path: Assets/Scenes/03_DePrins/DePrins_10 1.unity
+    guid: 4111b709922dac049bde49efe7af5323
   - enabled: 1
     path: Assets/Scenes/03_DePrins/Don't you worry about a thing.unity
     guid: 14e73d0433eece9448c1a7257371a4ea
@@ -60,38 +66,41 @@ EditorBuildSettings:
     path: Assets/Scenes/Hoofdstuk_5/CrazylittleThing.unity
     guid: 2e15e85156c795d4f813d24bd774ba48
   - enabled: 1
+    path: Assets/Scenes/Hoofdstuk_6/JosText.unity
+    guid: e6afd4c58f455304eaa8ffdd47b3043e
+  - enabled: 1
+    path: Assets/Scenes/Hoofdstuk_6/Scene12.unity
+    guid: 4ccd31a18ee23cb4a92f53aaa88f0f3b
+  - enabled: 1
     path: Assets/Scenes/Hoofdstuk_6/Pauze.unity
     guid: 22cebc71fff995747b70d7c955dec4e6
   - enabled: 1
     path: Assets/Scenes/Hoofdstuk_6/naPauze.unity
     guid: a905ed98fee461848ad825cc9c251744
   - enabled: 1
-    path: Assets/Scenes/Hoofdstuk_7/Scene12.unity
-    guid: 4ccd31a18ee23cb4a92f53aaa88f0f3b
-  - enabled: 1
-    path: Assets/Scenes/Hoofdstuk_7/Scene13.unity
+    path: Assets/Scenes/Hoofdstuk_7/Scene feeling good.unity
     guid: 17fd794541f672648b3ebfa04d8a95aa
   - enabled: 1
-    path: Assets/Scenes/Hoofdstuk_7/Scene14.unity
+    path: Assets/Scenes/Hoofdstuk_7/Schorsbosebloakje.unity
     guid: 4f91f1439030a3f4fb58edb9dd442f7e
   - enabled: 1
-    path: Assets/Scenes/Hoofdstuk_7/SceneDennis.unity
+    path: Assets/Scenes/Hoofdstuk_7/For once in my life.unity
+    guid: 1af14f50baf662b42866ff2e3e13c63c
+  - enabled: 1
+    path: Assets/Scenes/Hoofdstuk_7/Buutreden.unity
+    guid: 25eeb2c3c8d24684b96449ee4f68f082
+  - enabled: 1
+    path: Assets/Scenes/Hoofdstuk_8/SceneDennis.unity
     guid: 153d64f03d5a20640abe6e0fdbfcda80
-  - enabled: 0
-    path: Assets/Scenes/Hoofdstuk_7/SceneP.unity
-    guid: 87a3f77a4e4ccfe4e8bbd28bc7e9f3ab
-  - enabled: 0
-    path: Assets/Scenes/Hoofdstuk_8/Scene15.unity
-    guid: ca23218829f46c44eaee5c863df8f3e1
   - enabled: 1
-    path: Assets/Scenes/Hoofdstuk_8/Scene16.unity
+    path: Assets/Scenes/Hoofdstuk_8/SceneRommelpot.unity
     guid: 55e7ab4bfe6d9b9409e651df216ec7ea
-  - enabled: 1
-    path: Assets/Scenes/Hoofdstuk_8/Scene17.unity
-    guid: fff3b12d875ca3b468bd69b8f7215793
   - enabled: 1
     path: Assets/Scenes/Hoofdstuk_8/Scene18.unity
     guid: 366a22238eeed624282e09da04366771
+  - enabled: 1
+    path: Assets/Scenes/Hoofdstuk_8/Marwoensdagmergen.unity
+    guid: 6583cdca807d62946a8b86d4c1e6d41d
   - enabled: 1
     path: Assets/Scenes/Hoofdstuk_9/Scene19.unity
     guid: 0cddd72b9269c7143ba20e5d419e292d
@@ -102,11 +111,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Hoofdstuk_9/Dansmarieken.unity
     guid: 4a8d01d042229b544b352b7093b27147
   - enabled: 1
-    path: Assets/Scenes/Hoofdstuk_9/Scene20.unity
-    guid: 737f8318d16e9ff45aea3973d8697f75
-  - enabled: 1
     path: Assets/Scenes/Hoofdstuk_9/Scene22.unity
     guid: f946218ed930de8458d897bdf6ea259d
+  - enabled: 1
+    path: Assets/Scenes/Hoofdstuk_9/Scene20.unity
+    guid: 737f8318d16e9ff45aea3973d8697f75
   - enabled: 1
     path: Assets/Scenes/Hoofdstuk_9/Scene21.unity
     guid: 6497024ed7d03f240a997a214fcbd015
@@ -114,12 +123,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Hoofdstuk_10/Scene23.unity
     guid: db39ddb3eb2a17a4799f610439242e8f
   - enabled: 1
-    path: Assets/Scenes/Hoofdstuk_10/Scene 25.unity
+    path: Assets/Scenes/Hoofdstuk_10/Scene24.unity
+    guid: 22ae5c40a6bc26749b64a9c5111c67e0
+  - enabled: 1
+    path: Assets/Scenes/Hoofdstuk_11/Scene 25.unity
     guid: 7b08fe26a1ed21345b40ac78a75b935e
   - enabled: 1
     path: Assets/Scenes/Hoofdstuk_11/Scene26.unity
     guid: 3b31b4e30328ee140b1b44d0a5fdc266
   - enabled: 1
+    path: Assets/Scenes/Hoofdstuk_11/Kroeg.unity
+    guid: 915825feaf4c09a428165d35366ac97d
+  - enabled: 1
     path: Assets/Scenes/Hoofdstuk_11/Scene27.unity
     guid: f40487f8f9f6f5747bd70e488aa053bd
+  - enabled: 1
+    path: Assets/Scenes/Hoofdstuk_12_Einde/Fin.unity
+    guid: 4caef77720f40bb47960037c7a6fba03
   m_configObjects: {}

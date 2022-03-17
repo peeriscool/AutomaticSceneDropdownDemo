@@ -558,10 +558,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8200329153582841129, guid: c735a57662ea93b4ba3841911f8f338a, type: 3}
+      propertyPath: objectWithBodySourcViewScipt
+      value: 
+      objectReference: {fileID: 1775878395}
+    - target: {fileID: 8200329153888802382, guid: c735a57662ea93b4ba3841911f8f338a, type: 3}
+      propertyPath: objectWithBodySourcViewScipt
+      value: 
+      objectReference: {fileID: 1775878395}
+    - target: {fileID: 8200329154207405073, guid: c735a57662ea93b4ba3841911f8f338a, type: 3}
+      propertyPath: objectWithBodySourcViewScipt
+      value: 
+      objectReference: {fileID: 1775878395}
+    - target: {fileID: 8200329154488580908, guid: c735a57662ea93b4ba3841911f8f338a, type: 3}
+      propertyPath: objectWithBodySourcViewScipt
+      value: 
+      objectReference: {fileID: 1775878395}
+    - target: {fileID: 8200329154798736732, guid: c735a57662ea93b4ba3841911f8f338a, type: 3}
+      propertyPath: objectWithBodySourcViewScipt
+      value: 
+      objectReference: {fileID: 1775878395}
+    - target: {fileID: 8200329155518993800, guid: c735a57662ea93b4ba3841911f8f338a, type: 3}
+      propertyPath: objectWithBodySourcViewScipt
+      value: 
+      objectReference: {fileID: 1775878395}
     - target: {fileID: 8200329155598956327, guid: c735a57662ea93b4ba3841911f8f338a, type: 3}
       propertyPath: objectWithBodySourcViewScipt
       value: 
-      objectReference: {fileID: 388622236}
+      objectReference: {fileID: 1775878395}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c735a57662ea93b4ba3841911f8f338a, type: 3}
 --- !u!1 &1775878395

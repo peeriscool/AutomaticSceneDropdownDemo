@@ -271,13 +271,13 @@ public class BodySourceView1 : MonoBehaviour
             if (jt.ToString().Equals("ShoulderLeft"))
             {
                 hombroIzk = GetQuaternionJoint(body, jt);
-            //    IzkHombroY = map(hombroIzk.x, 0.70f, 0.80f, 0, -30);
+                IzkHombroY = map(hombroIzk.x, 0.70f, 0.80f, 0, -30);
             }
 
             if (jt.ToString().Equals("ShoulderRight"))
             {
                 hombroDer = GetQuaternionJoint(body, jt);
-             //   DerHombroY = map(hombroDer.x, 0.80f, 0.70f, 0, -30);
+                DerHombroY = map(hombroDer.x, 0.80f, 0.70f, 0, -30);
             }
 
             if (jt.ToString().Equals("AnkleLeft"))
