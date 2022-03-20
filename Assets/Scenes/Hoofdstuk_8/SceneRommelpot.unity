@@ -249,12 +249,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateitems:
+  - {fileID: 2090791751}
   - {fileID: 1545824231}
   - {fileID: 1545824231}
   - {fileID: 1461409418}
   - {fileID: 1461409418}
   - {fileID: 969711157}
   - {fileID: 969711157}
+  - {fileID: 2090791751}
 --- !u!4 &219098129
 Transform:
   m_ObjectHideFlags: 0
@@ -816,7 +818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bcb04de294d1a734db71d93d931bf8bc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb04de294d1a734db71d93d931bf8bc, type: 3}
@@ -1134,7 +1136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7b4cca89c609e9343b861a18cd550214, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b4cca89c609e9343b861a18cd550214, type: 3}
@@ -1256,9 +1258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3af4d4c68574c46b611311995a22f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  degree: {x: -90, y: 0, z: -130}
+  degree: {x: -90, y: 0, z: -80}
   door: {fileID: 1699050737}
-  speed: 300
+  speed: 700
 --- !u!1 &1751428542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,7 +1463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   degree: {x: -90, y: 0, z: -130}
   door: {fileID: 1914039048}
-  speed: 300
+  speed: 700
 --- !u!1 &1917646272 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1236303744802745272, guid: bcb04de294d1a734db71d93d931bf8bc, type: 3}
@@ -1481,7 +1483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   degree: {x: -90, y: 0, z: 130}
   door: {fileID: 1917646272}
-  speed: 300
+  speed: 700
 --- !u!1 &1975919352
 GameObject:
   m_ObjectHideFlags: 0

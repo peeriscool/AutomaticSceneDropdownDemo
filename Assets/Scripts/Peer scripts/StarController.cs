@@ -28,8 +28,8 @@ public class StarController : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Minus)) { Time.timeScale -= 0.1f; Debug.Log(Time.timeScale); }
-        if (Input.GetKeyDown(KeyCode.Equals)){ Time.timeScale += 0.1f; Debug.Log(Time.timeScale); }
+       // if (Input.GetKeyDown(KeyCode.Minus)) { Time.timeScale -= 0.1f; Debug.Log(Time.timeScale); }
+     //   if (Input.GetKeyDown(KeyCode.Equals)){ Time.timeScale += 0.1f; Debug.Log(Time.timeScale); }
         if (Input.GetKeyDown(KeyCode.LeftBracket))
         {
             float movefactor = -3000f;

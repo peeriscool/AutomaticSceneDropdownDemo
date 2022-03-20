@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Video;
 
 [RequireComponent(typeof(VideoPlayer))]
-public class videocontrol : MonoBehaviour
+public class Videocontrol : MonoBehaviour
 {
     VideoPlayer controller;
 
