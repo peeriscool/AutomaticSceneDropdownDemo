@@ -17,6 +17,6 @@ public class opendoor : MonoBehaviour
     void Update()
     {
         Quaternion original = door.transform.localRotation;
-        door.transform.localRotation = Quaternion.Lerp(original, Quaternion.Euler(degree.x, degree.y, degree.z),Time.time/ speed);   
+        door.transform.localRotation = Quaternion.Lerp(original, Quaternion.Euler(degree.x, degree.y, degree.z),Time.deltaTime/ speed);   
     }
 }

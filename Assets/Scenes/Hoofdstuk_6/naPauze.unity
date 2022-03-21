@@ -159,7 +159,7 @@ MonoBehaviour:
   frameCounter: 0
   folderName: Frames
   imageSequenceName: 
-  numberOfFrames: 200
+  numberOfFrames: 94
 --- !u!64 &746730119
 MeshCollider:
   m_ObjectHideFlags: 0

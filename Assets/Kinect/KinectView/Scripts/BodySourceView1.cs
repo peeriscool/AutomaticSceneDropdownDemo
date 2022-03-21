@@ -51,14 +51,13 @@ public class BodySourceView1 : MonoBehaviour
     public Text dato;
 
     public bool user = false;
-
-
-    //Diccionario de Bodies y sus respectivos ID's
+    //Dictionary of Bodies and their respective ID's
+    
     private Dictionary<ulong, GameObject> _Bodies = new Dictionary<ulong, GameObject>();
     private BodySourceManager _BodyManager;
 
 
-    //Diccionario de Joints del cuerpo en el kinect
+    //Dictionary of Joints of the body in the kinect
     private Dictionary<Kinect.JointType, Kinect.JointType> _BoneMap = new Dictionary<Kinect.JointType, Kinect.JointType>()
     {
         { Kinect.JointType.FootLeft, Kinect.JointType.AnkleLeft },
@@ -97,7 +96,7 @@ public class BodySourceView1 : MonoBehaviour
     void Update () 
     {
 
-        //Inicialización del kinect
+        //initialize the kinect
         if (_BodyManager == null)
         {
             return;
@@ -109,8 +108,8 @@ public class BodySourceView1 : MonoBehaviour
             return;
         }
 
-        //Agregar ID cuando se detecta un cuerpo
-        List<ulong> trackedIds = new List<ulong>();
+        //Add ID when a body is detected
+        List <ulong> trackedIds = new List<ulong>();
         foreach(var body in data)
         {
             if (body == null)
@@ -126,7 +125,7 @@ public class BodySourceView1 : MonoBehaviour
         
         List<ulong> knownIds = new List<ulong>(_Bodies.Keys);
 
-        // Eliminar cuerpos que ya no están
+        // Delete bodies that are no longer
         foreach (ulong trackingId in knownIds)
         {
             if(!trackedIds.Contains(trackingId))
@@ -137,7 +136,7 @@ public class BodySourceView1 : MonoBehaviour
             }
         }
 
-        //Esperar que el Kinect detecte un cuerpo
+        //Wait for the Kinect to detect a body
         foreach (var body in data)
         {
             if (body == null)
@@ -145,18 +144,18 @@ public class BodySourceView1 : MonoBehaviour
                 continue;
             }
 
-            //Se crea un nuevo cuerpo si es detectado
+            //A new body is created if detected
             if (body.IsTracked)
             {
                 if(!_Bodies.ContainsKey(body.TrackingId))
                 {
-                    //CREA EL CUERPO mediante los cubos (nombre y ecala) pero no les da ubicación
+                   // CREATE THE BODY using the cubes (name and scale) but do not give them a location
                     _Bodies[body.TrackingId] = CreateBodyObject(body.TrackingId);                    
                 }
 
                 user = true;
 
-                //ubica los cubos en la posiciones correspondientes a cada joint
+                //place the cubes in the positions corresponding to each joint
                 RefreshBodyObject(body, _Bodies[body.TrackingId]);
                 
                 //manos
@@ -186,7 +185,7 @@ public class BodySourceView1 : MonoBehaviour
             return Mathf.Round(articulacion * Mathf.Pow(10, 2)) / 100;
     }
 
-    //CREA EL CUERPO mediante los cubos (nombre y ecala) pero no les da ubicación
+    // CREATE THE BODY using the cubes (name and scale) but do not give them a location
     private GameObject CreateBodyObject(ulong id)
     {
         //crea un cuerpo y le da un id
@@ -211,13 +210,13 @@ public class BodySourceView1 : MonoBehaviour
         return body;
     }
 
-    //ubica los cubos en la posiciones correspondientes a cada joint
+    //place the cubes in the positions corresponding to each joint
     private void RefreshBodyObject(Kinect.Body body, GameObject bodyObject)
     {
-        //recorre los joint del cuerpo en el kinect 
+        // traverse the joints of the body in the kinect
         for (Kinect.JointType jt = Kinect.JointType.SpineBase; jt <= Kinect.JointType.ThumbRight; jt++)
         {
-            //GUARDA EL JOINT en la variable sourceJoint
+            //SAVE THE JOINT in the variable sourceJoint
             Kinect.Joint sourceJoint = body.Joints[jt];
             Kinect.Joint? targetJoint = null;
             
@@ -225,14 +224,12 @@ public class BodySourceView1 : MonoBehaviour
             {
                 targetJoint = body.Joints[_BoneMap[jt]];
             }
-            
-            //encuentra y relaciona el arreglo de joints del cuerpo creado con el join del opbjeto cuerpo
+            //find and relate the array of joints of the created body with the join of the body object
             Transform jointObj = bodyObject.transform.Find(jt.ToString());
-            //luego de encontrar el correspondiente joint, le da su correspondiente ubicación
+            //after finding the corresponding joint, give it its corresponding location
             jointObj.localPosition = GetVector3FromJoint(sourceJoint);
 
             //slaat de locatie van elk lichaamsgewricht op in een variabele
-            //guarda la ubicación de cada joint del cuerpo en una variable
             if (jt.ToString().Equals("HandLeft"))
             {
                 manoIzk = GetVector3FromJoint(sourceJoint);
