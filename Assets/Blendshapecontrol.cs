@@ -9,19 +9,38 @@ public class Blendshapecontrol : MonoBehaviour
     public SkinnedMeshRenderer meshRenderer;
 
     int curFrame;
-    int index = 1;
+    float index = 1;
     float frameLength;
+    IEnumerator routine;
+    IEnumerator clear;
+    float max = 0;
 
+    private void Start()
+    {
+        clear = lerpcontrol();
+    }
     void Update()
     {
         if (Input.GetKey(KeyCode.Y))
         {
-            
-            meshRenderer.SetBlendShapeWeight(curFrame, index+=(int)animationSpeed);
+            if(IEnumerator.Equals(routine,null))
+            {
+                routine = lerpcontrol(); // 
+                StartCoroutine(routine);
 
+            }
+            if(IEnumerator.Equals(routine, clear))
+            {
+                //routine not yet cleared or done lerping
+                return;
+            }
             //meshRenderer.SetBlendShapeWeight((int)(Time.time * 100) % index, index++);
-            
+
         }
+        //if(Input.GetKeyUp(KeyCode.Y))
+        //{
+        //    index = 1;
+        //}
         //if (frameLength >= animationSpeed)
         //{
         //    UpdateAnimationFrame();
@@ -32,7 +51,16 @@ public class Blendshapecontrol : MonoBehaviour
         //    frameLength += Time.deltaTime;
         //}
     }
-
+    IEnumerator lerpcontrol()
+    {
+        
+        meshRenderer.SetBlendShapeWeight(curFrame, max);
+        max = Mathf.Lerp(0, animationSpeed, Mathf.Sin(Time.deltaTime * 100));
+        yield return new WaitForSeconds(0.1f);     
+            routine = null;
+          //  meshRenderer.SetBlendShapeWeight(curFrame, max);
+            Debug.Log("Routine = null");
+    }
     void UpdateAnimationFrame()
     {
         meshRenderer.SetBlendShapeWeight(curFrame, 0);

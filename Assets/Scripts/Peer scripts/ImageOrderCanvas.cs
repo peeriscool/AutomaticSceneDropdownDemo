@@ -46,6 +46,7 @@ public class ImageOrderCanvas : MonoBehaviour
         DisplayHost = new GameObject();
         displayed = DisplayHost.AddComponent<Image>();
         aspect =  DisplayHost.AddComponent<AspectRatioFitter>();
+        aspect.aspectMode = AspectRatioFitter.AspectMode.FitInParent;
         DisplayHost.transform.position = new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0);
         DisplayHost.transform.localScale  = new Vector3(1f,0.5f);//*= scaleOfImage; //sets the base scale for all the images
         DisplayHost.transform.parent = owner.gameObject.transform;

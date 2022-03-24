@@ -5217,6 +5217,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color1: {r: 0, g: 0.48945624, b: 0.509434, a: 1}
-  color2: {r: 0, g: 0.9626763, b: 0.9811321, a: 1}
+  color2: {r: 0, g: 0.3143396, b: 0.3207547, a: 1}
   color3: {r: 0, g: 0.15414974, b: 0.18867922, a: 1}
   cam: {fileID: 1899005458}

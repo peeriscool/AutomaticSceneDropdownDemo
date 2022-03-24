@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1665082020792132016, guid: 754870b0fbdbca7469ce1a663c52f97f, type: 3}
+      propertyPath: m_Text
+      value: Pause
+      objectReference: {fileID: 0}
     - target: {fileID: 1665082020792132018, guid: 754870b0fbdbca7469ce1a663c52f97f, type: 3}
       propertyPath: Invert
       value: 0

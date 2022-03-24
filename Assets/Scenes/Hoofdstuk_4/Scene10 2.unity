@@ -1190,6 +1190,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7386546673036243550, guid: fcfb2727a9ea91e40b894a395753ebe3, type: 3}
+      propertyPath: animationSpeed
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7656999807239111096, guid: fcfb2727a9ea91e40b894a395753ebe3, type: 3}
       propertyPath: m_Name
       value: breekbalk1

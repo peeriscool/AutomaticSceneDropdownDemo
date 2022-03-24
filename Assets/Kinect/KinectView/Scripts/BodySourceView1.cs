@@ -146,10 +146,11 @@ public class BodySourceView1 : MonoBehaviour
 
             //A new body is created if detected
             if (body.IsTracked)
-            {
+            {                
                 if(!_Bodies.ContainsKey(body.TrackingId))
                 {
-                   // CREATE THE BODY using the cubes (name and scale) but do not give them a location
+                    // CREATE THE BODY using the cubes (name and scale) but do not give them a location
+                    Debug.Log(body.TrackingId);
                     _Bodies[body.TrackingId] = CreateBodyObject(body.TrackingId);                    
                 }
 
@@ -180,7 +181,7 @@ public class BodySourceView1 : MonoBehaviour
         }
     }
 
-    private float redondear(float articulacion)
+    private float redondear(float articulacion) //round out
     {
             return Mathf.Round(articulacion * Mathf.Pow(10, 2)) / 100;
     }
@@ -200,8 +201,8 @@ public class BodySourceView1 : MonoBehaviour
 
             //al cubo joint lo escala, le da un nombre y lo asigna al cuerpo
             //schaalt de gewrichtskubus, geeft het een naam en wijst het toe aan het lichaam
-            jointObj.transform.localScale = new Vector3(0.000005f, 0.000005f, 0.000005f);
-            //jointObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+          //  jointObj.transform.localScale = new Vector3(0.000005f, 0.000005f, 0.000005f);
+            jointObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
 
             jointObj.name = jt.ToString();
             jointObj.transform.parent = body.transform;
@@ -289,7 +290,7 @@ public class BodySourceView1 : MonoBehaviour
                 }
                 else
                 {
-              //      tobilloIzkY = map(tobilloIzk.x, 0.9f, -0.5f, 50, 170);
+                    tobilloIzkY = map(tobilloIzk.x, 0.9f, -0.5f, 50, 170);
                 }
             }
 
@@ -358,8 +359,9 @@ public class BodySourceView1 : MonoBehaviour
     public static Vector3 GetVector3FromJoint(Kinect.Joint joint)
     {
         //return new Vector3(joint.Position.X, joint.Position.Y, joint.Position.Z);
-        //2.8 seems about right
-        return new Vector3(joint.Position.X*2.8f, joint.Position.Y* 2.8f, joint.Position.Z* 2.8f);
+      
+        //static vector that represents the body with scale
+        return new Vector3(joint.Position.X*2.4f, joint.Position.Y* 2.6f, joint.Position.Z* 2.4f);
     }
 
     //me retorna la orientación del joint
