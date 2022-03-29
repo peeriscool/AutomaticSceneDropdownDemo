@@ -37,7 +37,7 @@ public class BodySourceView2 : MonoBehaviour
     public GameObject IzkCodo;
     public GameObject pelvis;
     //public GameObject centroTorso;
-    public LineRenderer renderobject;
+    public TrailRenderer renderobject;
 
     public float DerHombroY;
     public float IzkHombroY;
@@ -57,7 +57,7 @@ public class BodySourceView2 : MonoBehaviour
     private Dictionary<ulong, GameObject> _Bodies = new Dictionary<ulong, GameObject>();
     private BodySourceManager _BodyManager;
 
-
+    
     //Dictionary of Joints of the body in the kinect
     private Dictionary<Kinect.JointType, Kinect.JointType> _BoneMap = new Dictionary<Kinect.JointType, Kinect.JointType>()
     {
@@ -93,6 +93,7 @@ public class BodySourceView2 : MonoBehaviour
     void Start()
     {
         _BodyManager = FindObjectOfType<BodySourceManager>();
+        renderobject = renderobject.GetComponent<TrailRenderer>();
     }
     void Update()
     {
@@ -122,6 +123,7 @@ public class BodySourceView2 : MonoBehaviour
             {
                 trackedIds.Add(body.TrackingId);
             }
+            
         }
 
         List<ulong> knownIds = new List<ulong>(_Bodies.Keys);
@@ -191,19 +193,55 @@ public class BodySourceView2 : MonoBehaviour
     {
         //crea un cuerpo y le da un id
         GameObject body = new GameObject("Body:" + id);
-      // LineRenderer add = body.AddComponent<LineRenderer>();
-       // add = renderobject;
+    
+
+        // add = renderobject;
 
         //recorre los joint del cuerpo en el kinect 
         for (Kinect.JointType jt = Kinect.JointType.SpineBase; jt <= Kinect.JointType.ThumbRight; jt++)
         {
             //por cada joint crea un cubo
             GameObject jointObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            if(jt == Kinect.JointType.HandLeft)
+            {
+                TrailRenderer a = jointObj.AddComponent<TrailRenderer>();
+                a.material = renderobject.material;
+                a.material.color = Color.green;
+                a.startWidth = 0f;
+                a.endWidth = 0.1f;
+                
+            }
+            if (jt == Kinect.JointType.HandRight)
+            {
+                TrailRenderer b = jointObj.AddComponent<TrailRenderer>();
+                b.material = renderobject.material;
+                b.material.color = Color.yellow;
+                b.startWidth = 0f;
+                b.endWidth = 0.1f;
+                
+            }
+            //if (jt == Kinect.JointType.AnkleLeft)
+            //{
+            //    TrailRenderer c = jointObj.AddComponent<TrailRenderer>();
+            //    c.material = renderobject.material;
+            //    c.material.color = Color.red;
+            //    c.startWidth = 0f;
+            //    c.endWidth = 0.1f;
 
-
+            //    c.startColor = Color.green;
+            //}
+            //if (jt == Kinect.JointType.AnkleLeft)
+            //{
+            //    TrailRenderer d = jointObj.AddComponent<TrailRenderer>();
+            //    d.material = renderobject.material;
+            //    d.material.color = Color.green;
+            //    d.startWidth = 0f;
+            //    d.endWidth = 0.1f;
+            //    d.startColor = Color.red;
+            //}
             //al cubo joint lo escala, le da un nombre y lo asigna al cuerpo
             //schaalt de gewrichtskubus, geeft het een naam en wijst het toe aan het lichaam
-             jointObj.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+            jointObj.transform.localScale = new Vector3(0.0005f, 0.0005f, 0.0005f);
             //jointObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
 
             jointObj.name = jt.ToString();

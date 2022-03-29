@@ -849,7 +849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 167590679723685993, guid: 9813ac445d2e21a47a646aec76bd5547, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 167590679736987762, guid: 9813ac445d2e21a47a646aec76bd5547, type: 3}
       propertyPath: m_RootOrder
@@ -1126,7 +1126,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878259703}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3dea775b70b58cc459b3717dd118b002, type: 3}
   m_Name: 
@@ -1140,6 +1140,7 @@ MonoBehaviour:
   DerCodo: {fileID: 1878259706}
   IzkCodo: {fileID: 1878259705}
   pelvis: {fileID: 1878259704}
+  renderobject: {fileID: 0}
   DerHombroY: 0
   IzkHombroY: 0
   tobilloIzkY: 0

@@ -117,9 +117,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Hoofdstuk_9/Scene dansmari alternative.unity
     guid: 1074efc172d5bb24fbf0f62248b52765
   - enabled: 1
+    path: Assets/Scenes/Hoofdstuk_9/linerenderKinect.unity
+    guid: 92f8a210e2162224492e5a356a89d5e2
+  - enabled: 0
     path: Assets/Scenes/Hoofdstuk_9/Dansmarieken.unity
     guid: 4a8d01d042229b544b352b7093b27147
   - enabled: 1
+    path: Assets/Scenes/Hoofdstuk_9/SceneOma 1.unity
+    guid: 2b8a94ceb1bff5e409f0d561a0b1cd9a
+  - enabled: 0
     path: Assets/Scenes/Hoofdstuk_9/SceneOma.unity
     guid: 737f8318d16e9ff45aea3973d8697f75
   - enabled: 1
@@ -152,7 +158,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hoofdstuk_12_Einde/Fin.unity
     guid: 4caef77720f40bb47960037c7a6fba03
-  - enabled: 1
-    path: Assets/Scenes/Hoofdstuk_9/linerenderKinect.unity
-    guid: 92f8a210e2162224492e5a356a89d5e2
   m_configObjects: {}

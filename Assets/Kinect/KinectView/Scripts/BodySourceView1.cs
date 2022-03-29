@@ -150,7 +150,7 @@ public class BodySourceView1 : MonoBehaviour
                 if(!_Bodies.ContainsKey(body.TrackingId))
                 {
                     // CREATE THE BODY using the cubes (name and scale) but do not give them a location
-                    Debug.Log(body.TrackingId);
+                 //   Debug.Log(body.TrackingId);
                     _Bodies[body.TrackingId] = CreateBodyObject(body.TrackingId);                    
                 }
 
@@ -201,8 +201,8 @@ public class BodySourceView1 : MonoBehaviour
 
             //al cubo joint lo escala, le da un nombre y lo asigna al cuerpo
             //schaalt de gewrichtskubus, geeft het een naam en wijst het toe aan het lichaam
-          //  jointObj.transform.localScale = new Vector3(0.000005f, 0.000005f, 0.000005f);
-            jointObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            jointObj.transform.localScale = new Vector3(0.000005f, 0.000005f, 0.000005f);
+           // jointObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
 
             jointObj.name = jt.ToString();
             jointObj.transform.parent = body.transform;
@@ -330,7 +330,7 @@ public class BodySourceView1 : MonoBehaviour
 
             if (jt.ToString().Equals("SpineBase"))
             {
-              //  Debug.Log("assigent spine vector3 = " + GetVector3FromJoint(sourceJoint));
+               // Debug.Log("assigent spine vector3 = " + GetVector3FromJoint(sourceJoint));
                 pelvisSpineBase = GetVector3FromJoint(sourceJoint);
                // print(pelvisSpineBase.x + "   " + pelvisSpineBase.y + "   " + pelvisSpineBase.z);
             }

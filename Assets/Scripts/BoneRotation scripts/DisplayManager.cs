@@ -17,4 +17,5 @@ public class DisplayManager : MonoBehaviour
             // Activate the display 1 (second monitor connected to the system).
             Display.displays[1].Activate();
         }
+    }
 }
